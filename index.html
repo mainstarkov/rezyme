@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Алексей Старков — Node.js / Backend Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" href="#">AS<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">Обо мне</a></li>
+    <li><a href="#skills">Навыки</a></li>
+    <li><a href="#projects">Проекты</a></li>
+    <li><a href="#education">Образование</a></li>
+  </ul>
+  <a class="nav-cta" href="https://github.com/mainstarkov" target="_blank" rel="noopener">GitHub →</a>
+  <button class="burger" id="burgerBtn" onclick="toggleMobileNav()" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="#about" onclick="closeMobileNav()">Обо мне</a></li>
+    <li><a href="#skills" onclick="closeMobileNav()">Навыки</a></li>
+    <li><a href="#projects" onclick="closeMobileNav()">Проекты</a></li>
+    <li><a href="#education" onclick="closeMobileNav()">Образование</a></li>
+    <li><a href="https://github.com/mainstarkov" target="_blank" rel="noopener" onclick="closeMobileNav()">GitHub →</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge animate-up" style="--d:0ms">
+      <span class="badge-dot"></span>
+      Открыт к предложениям
+    </div>
+    <h1 class="animate-up" style="--d:80ms">
+      Алексей<br><em>Старков</em>
+    </h1>
+    <p class="hero-role animate-up" style="--d:140ms">Node.js / Backend Developer</p>
+    <p class="hero-desc animate-up" style="--d:200ms">
+      Разработчик серверных приложений, систем автоматизации и сбора данных.<br>
+      Специализируюсь на Telegram-ботах, MTProto и интеграции AI-решений.
+    </p>
+    <div class="hero-meta animate-up" style="--d:260ms">
+      <span class="meta-item">📍 Москва, м. Нижегородская</span>
+    </div>
+    <div class="hero-actions animate-up" style="--d:320ms">
+      <a class="btn-primary" href="#projects">Смотреть проекты</a>
+      <a class="btn-outline" href="https://clck.ru/3TosBF" target="_blank" rel="noopener">Портфолио</a>
+    </div>
+    <div class="hero-links animate-up" style="--d:380ms">
+      <a class="social-link" href="https://github.com/mainstarkov" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        github.com/mainstarkov
+      </a>
+      <a class="social-link" href="https://mainstarkov.github.io/socksyfree/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        SocksyFree проект
+      </a>
+    </div>
+  </div>
+  <div class="hero-visual animate-up" style="--d:100ms">
+    <div class="laptop-wrap">
+      <!-- screen -->
+      <div class="laptop-screen">
+        <div class="screen-bar">
+          <span class="dot dot-r"></span>
+          <span class="dot dot-y"></span>
+          <span class="dot dot-g"></span>
+          <span class="screen-lang" id="screenLang">node.js</span>
+        </div>
+        <div class="screen-body">
+          <div class="code-slides" id="codeSlides">
+            <!-- slides injected by JS -->
+          </div>
+        </div>
+      </div>
+      <!-- base -->
+      <div class="laptop-hinge"></div>
+      <div class="laptop-base">
+        <div class="laptop-trackpad"></div>
+      </div>
+    </div>
+    <div class="float-chip fc-1">Node.js</div>
+    <div class="float-chip fc-2">Python</div>
+    <div class="float-chip fc-3">SQLite</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-label reveal">Обо мне</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2 class="section-title">Серверный разработчик<br>с фокусом на автоматизацию</h2>
+        <p>Разрабатываю серверные приложения, системы автоматизации и сбора данных. Проектирую высоконагруженные архитектуры, Telegram-боты и юзерботы на MTProto, интегрирую сторонние API и AI-решения.</p>
+        <p>Имею опыт создания отказоустойчивых серверных скриптов, обработки больших объёмов текстовой информации и оптимизации взаимодействия с базами данных.</p>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-card">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">ключевых проекта</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">100K+</div>
+          <div class="stat-label">записей в БД</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">MTProto</div>
+          <div class="stat-label">опыт с Telegram API</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">AI</div>
+          <div class="stat-label">интеграции Gemini API</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section section-dark" id="skills">
+  <div class="container">
+    <div class="section-label reveal">Технические навыки</div>
+    <h2 class="section-title reveal">Стек</h2>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <div class="skill-group-icon">⚡</div>
+        <h3>Языки</h3>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Node.js</span>
+          <span class="skill-tag primary">JavaScript</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+        </div>
+        <p class="skill-note">Без опыта работы с системами 1С</p>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-icon">🗄️</div>
+        <h3>Базы данных</h3>
+        <div class="skill-tags">
+          <span class="skill-tag primary">SQLite</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+        <p class="skill-note">Проектирование схем, оптимизация высоконагруженных INSERT-запросов, настройка индексов</p>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-icon">🤖</div>
+        <h3>Telegram API</h3>
+        <div class="skill-tags">
+          <span class="skill-tag primary">GramJS</span>
+          <span class="skill-tag primary">node-telegram-bot-api</span>
+          <span class="skill-tag">Telethon</span>
+          <span class="skill-tag">Pyrogram</span>
+        </div>
+        <p class="skill-note">Мульти-аккаунтные сети, парсеры, юзерботы</p>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-icon">🛠️</div>
+        <h3>Инструменты и AI</h3>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Gemini API</span>
+          <span class="skill-tag primary">REST API</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">AI-агенты</span>
+        </div>
+        <p class="skill-note">Разработка и интеграция платформ для AI-агентов (gen-api.ru)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-label reveal">Проекты</div>
+    <h2 class="section-title reveal">Ключевые работы</h2>
+    <div class="projects-list">
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-num">01</span>
+            <div class="project-tags-row">
+              <span class="ptag">Node.js</span>
+              <span class="ptag">GramJS</span>
+              <span class="ptag">SQLite</span>
+            </div>
+          </div>
+          <a class="project-link" href="https://mainstarkov.github.io/socksyfree/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">SocksyFree</h3>
+        <p class="project-subtitle">Распределённая парсинг-платформа в Telegram</p>
+        <ul class="project-points">
+          <li>Спроектировал мульти-аккаунтную систему юзерботов для глубокого и пассивного сбора данных из десятков крупных Telegram-чатов</li>
+          <li>Реализовал интеллектуальные алгоритмы защиты от ограничений FloodWait — ротация аккаунтов по принципу Round-Robin, кастомные задержки</li>
+          <li>Интегрировал локальную базу данных SQLite для хранения и структурирования сотен тысяч записей, настроил быструю выборку по username и автоматическую генерацию прямых ссылок на оригинальные сообщения</li>
+        </ul>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-num">02</span>
+            <div class="project-tags-row">
+              <span class="ptag">Node.js</span>
+              <span class="ptag">node-telegram-bot-api</span>
+              <span class="ptag">REST API</span>
+            </div>
+          </div>
+          <a class="project-link" href="https://t.me/ezhikchekrobot" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">@ezhikchekrobot</h3>
+        <p class="project-subtitle">Telegram-бот для сетевого пробива доменов</p>
+        <ul class="project-points">
+          <li>Разработал быстрого утилитарного бота для комплексной диагностики доменных имён</li>
+          <li>Интегрировал функции получения IP-адресов, геолокации серверов, WHOIS-информации, DNS-записей и проверки доступности (Ping) через запросы к сторонним API</li>
+          <li>Спроектировал удобный UI с динамическим Inline-меню, защищённый от ошибок Telegram API (MESSAGE_NOT_MODIFIED)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section section-dark" id="education">
+  <div class="container">
+    <div class="section-label reveal">Образование</div>
+    <h2 class="section-title reveal">Учёба</h2>
+    <div class="edu-card reveal">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-info">
+        <h3>Среднее профессиональное образование</h3>
+        <p class="edu-spec">Информационные системы и программирование</p>
+        <p class="edu-group">Группа: 1ип-3-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-label reveal">Контакты</div>
+    <h2 class="section-title reveal">Свяжитесь со мной</h2>
+    <div class="contact-grid reveal">
+      <a class="contact-card" href="https://github.com/mainstarkov" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        <div>
+          <div class="cc-label">GitHub</div>
+          <div class="cc-val">github.com/mainstarkov</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://clck.ru/3TosBF" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <div class="cc-label">Местоположение</div>
+          <div class="cc-val">Москва, м. Нижегородская</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://mainstarkov.github.io/socksyfree/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <div>
+          <div class="cc-label">Проект SocksyFree</div>
+          <div class="cc-val">mainstarkov.github.io/socksyfree</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://t.me/clrcc" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        <div>
+          <div class="cc-label">Telegram</div>
+          <div class="cc-val">@clrcc</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <span class="footer-name">Алексей Старков</span>
+    <span class="footer-copy">Node.js / Backend Developer · 2025</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
