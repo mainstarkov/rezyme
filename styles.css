@@ -369,6 +369,60 @@ nav.scrolled { padding: 16px 48px; }
 }
 .project-points li::marker { color: #333; }
 
+/* OPEN SOURCE / GITHUB REPOS */
+.repo-block { margin-top: 80px; }
+.repo-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 28px; flex-wrap: wrap; gap: 12px;
+}
+.repo-head-title {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted); font-family: var(--mono);
+}
+.repo-head-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.8rem; color: var(--muted); font-family: var(--mono);
+  transition: color .15s;
+}
+.repo-head-link svg { width: 13px; height: 13px; }
+.repo-head-link:hover { color: var(--accent); }
+
+.repo-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+}
+.repo-card {
+  background: var(--bg);
+  padding: 28px 28px 24px;
+  display: flex; flex-direction: column;
+  transition: background .15s;
+}
+.repo-card:hover { background: #111; }
+.repo-card-top { margin-bottom: 16px; }
+.repo-lang {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.72rem; color: var(--muted); font-family: var(--mono);
+}
+.lang-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--c, var(--accent));
+}
+.repo-name {
+  font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+.repo-desc {
+  font-size: 0.9rem; color: rgba(232,232,224,0.5); line-height: 1.6;
+  margin-bottom: 20px; flex: 1;
+}
+.repo-links { display: flex; gap: 18px; }
+.repo-links a {
+  font-size: 0.8rem; font-weight: 500; color: var(--muted);
+  font-family: var(--mono); transition: color .15s;
+}
+.repo-links a:hover { color: var(--accent); }
+
 /* EDUCATION */
 .edu-card {
   display: flex; align-items: flex-start; gap: 24px;
@@ -441,6 +495,9 @@ footer { border-top: 1px solid var(--border); padding: 24px 0; }
   .contact-card { border-right: none; }
   .contact-card:nth-child(3) { border-bottom: 1px solid var(--border); }
   .footer-inner { flex-direction: column; gap: 6px; text-align: center; }
+
+  .repo-grid { grid-template-columns: 1fr 1fr; }
+  .repo-grid .repo-card:nth-child(2n) { border-right: none; }
 }
 
 @media (max-width: 560px) {
@@ -448,4 +505,6 @@ footer { border-top: 1px solid var(--border); padding: 24px 0; }
   .skills-grid .skill-group { border-right: none; border-bottom: 1px solid var(--border); }
   .skills-grid .skill-group:last-child { border-bottom: none; }
   .about-stats { grid-template-columns: 1fr 1fr; }
+
+  .repo-grid { grid-template-columns: 1fr; }
 }
