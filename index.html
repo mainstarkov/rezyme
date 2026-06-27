@@ -213,21 +213,23 @@
           <div class="project-meta">
             <span class="project-num">02</span>
             <div class="project-tags-row">
-              <span class="ptag">Node.js</span>
-              <span class="ptag">node-telegram-bot-api</span>
-              <span class="ptag">REST API</span>
+              <span class="ptag">Java</span>
+              <span class="ptag">Spring Boot</span>
+              <span class="ptag">WebSocket</span>
+              <span class="ptag">JWT</span>
+              <span class="ptag">FCM</span>
             </div>
           </div>
-          <a class="project-link" href="https://t.me/ezhikchekrobot" target="_blank" rel="noopener">
+          <a class="project-link" href="https://waterchat.me" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </div>
-        <h3 class="project-name">@ezhikchekrobot</h3>
-        <p class="project-subtitle">Telegram-бот для сетевого пробива доменов</p>
+        <h3 class="project-name">WaterChat</h3>
+        <p class="project-subtitle">Мессенджер реального времени на Spring Boot · waterchat.me</p>
         <ul class="project-points">
-          <li>Разработал быстрого утилитарного бота для комплексной диагностики доменных имён</li>
-          <li>Интегрировал функции получения IP-адресов, геолокации серверов, WHOIS-информации, DNS-записей и проверки доступности (Ping) через запросы к сторонним API</li>
-          <li>Спроектировал удобный UI с динамическим Inline-меню, защищённый от ошибок Telegram API (MESSAGE_NOT_MODIFIED)</li>
+          <li>Построил полноценный мессенджер на Spring Boot с живой доставкой сообщений через WebSocket, presence-трекингом онлайн-статусов и голосовыми звонками на WebRTC-сигналинге</li>
+          <li>Реализовал push-уведомления для офлайн-пользователей через Firebase Cloud Messaging и Web Push (VAPID): сервер шлёт push только когда юзер не в сети — архитектура масштабируется на 100+ одновременных пользователей</li>
+          <li>Обеспечил безопасность: JWT-аутентификация на Spring Security, вход по коду и QR, сквозное шифрование сообщений (Bouncy Castle). Единый бэкенд обслуживает веб-клиент, Android-приложение и Telegram mini-app</li>
         </ul>
       </div>
 
