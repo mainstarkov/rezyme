@@ -309,7 +309,6 @@ nav.scrolled { padding: 16px 48px; }
 }
 .skill-group:last-child { border-right: none; }
 .skill-group:hover { background: #111; }
-.skill-group-icon { display: none; }
 .skill-group h3 {
   font-size: 0.78rem; font-weight: 600; margin-bottom: 20px;
   color: var(--muted); font-family: var(--mono);
@@ -429,7 +428,6 @@ nav.scrolled { padding: 16px 48px; }
   padding: 36px 0; border-top: 1px solid var(--border);
   max-width: 560px;
 }
-.edu-icon { display: none; }
 .edu-info h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
 .edu-spec { font-size: 0.9rem; color: var(--accent); font-weight: 500; margin-bottom: 6px; }
 .edu-group { font-size: 0.82rem; color: var(--muted); font-family: var(--mono); }
