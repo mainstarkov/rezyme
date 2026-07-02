@@ -1,4 +1,4 @@
-/* ── CODE SLIDES ── */
+// Code Slides
 const slides = [
   {
     lang: 'node.js',
@@ -136,13 +136,13 @@ db.<span class="fn">exec</span>(<span class="st">\`
   }, 3000);
 })();
 
-/* ── NAV SCROLL ── */
+// Nav Scroll
 const mainNav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
   mainNav.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
-/* ── MOBILE NAV ── */
+// Mobile Nav
 function toggleMobileNav() {
   const nav = document.getElementById('mobileNav');
   const btn = document.getElementById('burgerBtn');
@@ -154,7 +154,7 @@ function closeMobileNav() {
   document.getElementById('burgerBtn').classList.remove('open');
 }
 
-/* ── SCROLL REVEAL ── */
+// Scroll Reveal
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
